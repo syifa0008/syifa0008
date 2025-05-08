@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tentang Kami - Coffee Star U</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fffaf3, #fce6c9);
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      background-color: #fff;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      animation: fadeInContainer 1s ease-in-out;
+    }
+
+    h1, h2 {
+      color: #5D3A00;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      margin-bottom: 30px;
+      animation: slideDown 1s ease forwards;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      margin-top: 40px;
+      position: relative;
+      animation: slideLeft 1s ease forwards;
+    }
+
+    p, ul {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #333;
+      text-align: justify;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    p:nth-of-type(1) {
+      animation-delay: 0.5s;
+    }
+
+    p:nth-of-type(2),
+    ul {
+      animation-delay: 0.8s;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 30px;
+      animation: slideInLeft 1s ease forwards;
+      opacity: 0;
+    }
+
+    li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #5D3A00;
+    }
+
+    li:nth-child(1) { animation-delay: 0.9s; }
+    li:nth-child(2) { animation-delay: 1.1s; }
+    li:nth-child(3) { animation-delay: 1.3s; }
+
+    .btn-home {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 28px;
+      background-color: #5D3A00;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 1.5s;
+      opacity: 0;
+    }
+
+    .btn-home:hover {
+      background-color: #7a4d00;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInContainer {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideLeft {
+      from { transform: translateX(40px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideInLeft {
+      from { transform: translateX(-30px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Tentang Coffee Star U</h1>
+    
+    <p><strong>Coffee Star U</strong> adalah tempat di mana cita rasa kopi premium bertemu dengan kenyamanan dan kehangatan suasana. Sejak berdiri pada tahun 2025, kami berkomitmen untuk menyajikan kopi terbaik dengan layanan yang ramah dan lingkungan yang menyenangkan.</p>
+
+    <h2>Visi Kami</h2>
+    <p>Menjadi kafe pilihan utama bagi para pecinta kopi dan tempat favorit untuk bersantai, bekerja, maupun berkumpul bersama keluarga dan sahabat.</p>
+
+    <h2>Misi Kami</h2>
+    <ul>
+      <li>Menghadirkan produk berkualitas dari biji kopi pilihan.</li>
+      <li>Menyediakan suasana yang nyaman dan estetis.</li>
+      <li>Memberikan pelayanan terbaik dan ramah pelanggan.</li>
+    </ul>
+
+    <h2>Layanan Kami</h2>
+    <p>Kami menyediakan beragam minuman kopi dan makanan ringan, serta layanan pemesanan online melalui WhatsApp. Semua disiapkan dengan standar kualitas tinggi dan disajikan oleh barista berpengalaman.</p>
+
+  <a href="/index.html" class="btn-home"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+
+
+</body>
+</html>

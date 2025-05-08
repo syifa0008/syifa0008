@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu - Coffee Star U</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f5f0;
+            padding: 20px;
+        }
+
+        .menu-item {
+            text-align: center;
+            margin: 30px auto;
+            padding: 20px;
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .counter button {
+            padding: 5px 12px;
+            font-size: 16px;
+            margin: 0 5px;
+            background-color: #ddd;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .whatsapp-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        #add-menu-form {
+            margin: 30px auto;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        #add-menu-form input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        #preview {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: none;
+            margin-bottom: 10px;
+        }
+
+        #menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Daftar Menu Coffee Star U</h1>
+
+<!-- Form Tambah Menu -->
+<div id="add-menu-form">
+    <h2>Tambah Menu Baru</h2>
+    <input type="text" id="new-name" placeholder="Nama Menu" required>
+    <input type="number" id="new-price" placeholder="Harga (Rp)" required>
+    <input type="file" id="new-image" accept="image/*" required>
+    <img id="preview" src="#" alt="Preview Image">
+    <button onclick="addNewMenu()">Tambah Menu</button>
+</div>
+
+<!-- Daftar Menu -->
+<div id="menu-container"></div>
+
+</body>
+</html>

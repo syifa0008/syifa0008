@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Coffee Star U - Beranda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff8f0;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      background: linear-gradient(180deg, #6b4226, #3e2615);
+      color: white;
+      padding: 30px 20px;
+      width: 240px;
+      position: sticky;
+      top: 0;
+    }
+
+    .sidebar h2 {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .sidebar nav a {
+      display: block;
+      margin: 15px 0;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #ffdfac;
+      color: #6b4226;
+      transform: translateX(6px);
+    }
+
+    .content {
+      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: url('images/bg-coffee.jpg') no-repeat center center/cover;
+    }
+
+    .content::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 0;
+    }
+
+    .header, .hero, .footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header {
+      padding: 50px 30px;
+      text-align: center;
+      background-color: rgba(255,255,255,0.9);
+      border-bottom: 3px dashed #c29a74;
+    }
+
+    .header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 40px;
+      color: #4a2b16;
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .header p {
+      font-size: 20px;
+      color: #3e2a1c;
+      margin-top: 10px;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .hero {
+      background-color: #fff;
+      margin: 40px auto;
+      padding: 30px;
+      max-width: 800px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.4s ease;
+    }
+
+    .hero:hover {
+      transform: scale(1.03);
+    }
+
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid #c29a74;
+      object-fit: cover;
+      animation: pulse 3s infinite;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #5a3e2b;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      background-color: rgba(107, 66, 38, 0.95);
+      color: white;
+      font-size: 14px;
+    }
+
+    .footer i {
+      margin: 0 5px;
+      animation: beat 2s infinite;
+    }
+
+    /* Animasi */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(194, 154, 116, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(194, 154, 116, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(194, 154, 116, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <h2 data-aos="fade-right">Coffee Star U</h2>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+      <a href="menu.html"><i class="fas fa-coffee"></i> Menu</a>
+      <a href="tentang.html"><i class="fas fa-users"></i> Tentang Kami</a>
+      <a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header class="header">
+      <h1 data-aos="zoom-in">Selamat Datang di Coffee Star U!</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Tempat nongkrong seru dengan kopi lezat dan suasana hangat</p>
+    </header>
+
+    <section class="hero" data-aos="fade-up" data-aos-delay="400">
+      <img src="../images/WhatsApp Image 2025-05-07 at 11.25.38.jpeg" alt="Coffee Star">
+      <p>Nikmati kopi favoritmu dan rasakan kehangatan suasana kami! Cocok untuk belajar, kerja, atau hangout bareng teman!</p>
+    </section>
+
+    <footer class="footer" data-aos="fade-in" data-aos-delay="600">
+      &copy; 2025 Coffee Star U | Dibuat dengan <i class="fas fa-heart"></i> dan banyak <i class="fas fa-coffee"></i>
+    </footer>
+  </main>
+</div>
+
+<!-- Script AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+</body>
+</html>
